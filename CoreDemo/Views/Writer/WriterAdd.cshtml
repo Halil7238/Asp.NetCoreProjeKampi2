@@ -1,0 +1,85 @@
+﻿@model CoreDemo.Models.AddWriterImage
+@{
+    ViewData["Title"] = "WriterAdd";
+    Layout = "~/Views/Shared/WriterLayout.cshtml";
+}
+
+
+
+
+<div class="page-header">
+    <h3 class="page-title">
+        <span class="page-title-icon bg-gradient-primary text-white mr-2">
+            <i class="mdi mdi-plus-circle menu-icon"></i>
+        </span> Yazar Ekleme
+    </h3>
+</div>
+<div class="row">
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <form class="form-group" method="post" enctype="multipart/form-data">
+                    @Html.HiddenFor(x => x.WriterId)
+                    @Html.HiddenFor(x => x.WriterStatus)
+                    @Html.HiddenFor(x => x.WriterImage)
+                    <div class="row">
+                        <div class="form-group col-xs-12 col-md-6 ">
+                            <label for="exampleInputName1">Yazar İsim</label>
+                            @Html.TextBoxFor(x=>x.WriterName, new {@class ="form-control"})
+                            @Html.ValidationMessageFor(x=>x.WriterName)
+                        </div>
+                        <div class="form-group col-xs-12 col-md-6">
+                            <label for="exampleInputEmail3">Yazar Email</label>
+                            @Html.TextBoxFor(x=>x.WriterMail, new {@class ="form-control"})
+                            @Html.ValidationMessageFor(x=>x.WriterMail)
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-xs-12 col-md-6">
+                            <label for="exampleInputPassword4">Yazar Şifre</label>
+                            @Html.TextBoxFor(x=>x.WriterPassword ,new {@class="form-control"})
+                            @Html.ValidationMessageFor(x=> x.WriterPassword, "", new {@class="text-danger"} )
+                        </div>
+                        <div class="form-group col-xs-12 col-md-6">
+                            <label for="exampleSelectGender">Yazar Şifre Onayı</label>
+                            @Html.TextBoxFor(x=>x.ConfirmPassword ,new {@class="form-control"} )
+                            @Html.ValidationMessageFor(x=> x.ConfirmPassword, "", new {@class="text-danger"})
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-xs-12 col-md-6">
+                            <label for="exampleSelectGender">Yazar Şehir</label>
+                            @*  @Html.DropDownListFor(x=>x.WriterCity, (List<SelectListItem>)ViewBag.wv, new{@class= "form-control"})*@
+                            @Html.DropDownListFor(x => x.WriterCity, new List<SelectListItem >
+                            { new SelectListItem{Text="İstanbul", Value="İstanbul"},
+                            new SelectListItem{Text="Batman", Value="Batman"}}, "Lütfen şehir seçiminizi yapınız." ,new {@class="form-control"} )
+                            @* <select class="form-control" id="exampleSelectGender">
+                            <option>Male</option>
+                            <option>Female</option>
+                            </select>*@
+                        </div>
+                        <div class="form-group col-xs-12 col-md-6">
+                            <label>Yazar Görsel</label>
+                            <input type="file" name="WriterImage"/>
+                           @* <div class="input-group col-xs-12">
+                                <input type="text"   class="form-control file-upload-info" disabled="" placeholder="Resim Yükle">
+                                <span class="input-group-append">
+                                    <button class="file-upload-browse btn btn-gradient-primary" type="button">Yükle</button>
+                                </span>
+                            </div>*@
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-12 ">
+                        <label for="exampleTextarea1">Textarea</label>
+                        @Html.TextAreaFor(x=>x.WriterAbout, 15, 3, new {@class ="form-control"})
+                        @Html.ValidationMessageFor(x=>x.WriterAbout)
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <button type="submit" class="btn btn-gradient-primary mr-2">Kaydet</button>
+                        <button class="btn btn-light">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

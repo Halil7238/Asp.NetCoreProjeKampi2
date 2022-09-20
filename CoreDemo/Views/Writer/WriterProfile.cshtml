@@ -1,0 +1,76 @@
+﻿@model EntityLayer.Concrete.Writer
+
+@{
+    ViewData["Title"] = "WriterProfile";
+    Layout = "~/Views/Shared/WriterLayout.cshtml";
+}
+
+
+<div class="page-header">
+    <h3 class="page-title">
+        <span class="page-title-icon bg-gradient-primary text-white mr-2">
+            <i class="mdi mdi-face menu-icon"></i>
+        </span> Yazar Profili
+    </h3>
+</div>
+<div class="row">
+
+
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex mt-5 align-items-top">
+
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="form-group col-xs-12 col-md-2 ">
+                                <image src="@Model.WriterImage" class="rounded" style=" width:10em !important; height:10em !important;"></image>
+                            </div>
+                            <div class="form-group col-xs-12 col-md-10 ">
+
+                                <div class="mb-0 flex-grow">
+                                    <h5 class="mr-2 mb-2">Halil Ak</h5>
+                                    <div class="template-demo mr-2 mb-3">
+                                        <button type="button" class="btn btn-inverse-dark btn-icon"><i class="mdi mdi-facebook"></i></button>
+                                        <button type="button" class="btn btn-inverse-dark btn-icon"><i class="mdi mdi-youtube"></i></button>
+                                        <button type="button" class="btn btn-inverse-dark btn-icon"><i class="mdi mdi-twitter"></i></button>
+                                        <button type="button" class="btn btn-inverse-dark btn-icon"><i class="mdi mdi-dribbble"></i></button>
+                                        <button type="button" class="btn btn-inverse-dark btn-icon"><i class="mdi mdi-linkedin"></i></button>
+                                        <button type="button" class="btn btn-inverse-dark btn-icon"><i class="mdi mdi-google-plus"></i></button>
+                                        <button class="btn btn-outline-dark btn-icon-text">
+                                            <i class="mdi mdi-city mdi-16px"></i>
+                                            <span class="d-inline-block text-left">
+                                                İstanbul
+                                            </span>
+                                        </button>
+                                    </div>
+
+                                    <p class="mb-0 font-weight-light">Merhaba, ben Halil, Yazılım Mühendisiyim. Erciyes Üniversitesinde 3. sınıfım. Üniversitede Rehber Gençlik Klukübü adındaki kulübte aktif olarak rol almaktayım.Kulübün düzenlemiş olduğu birbirinden farklı etkinlikler için tasarım oluşturma ve bu etkinliklere katılım gösterme noktasında çaba sarf ediyorum.Bununla birlikte üniversitede kendimi geliştirme adına farklı konulardaki kitap okumaları yapmaktayım. Kendimi geliştirme adına QataSoft qdındaki şirkette çalışmaktayım. Şirketin ihtiyaçlarına göre şekillenen bir iş temposu var. Bu tempoya göre Designer ve FullStack olarak iş yapmaktayım.Merhaba, ben Halil, Yazılım Mühendisiyim. Erciyes Üniversitesinde 3. sınıfım. Üniversitede Rehber Gençlik Klukübü adındaki kulübte aktif olarak rol almaktayım.Kulübün düzenlemiş olduğu birbirinden farklı etkinlikler için tasarım oluşturma ve bu etkinliklere katılım gösterme noktasında çaba sarf ediyorum.Bununla birlikte üniversitede kendimi geliştirme adına farklı konulardaki kitap okumaları yapmaktayım. Kendimi geliştirme adına QataSoft qdındaki şirkette çalışmaktayım. Şirketin ihtiyaçlarına göre şekillenen bir iş temposu var. Bu tempoya göre Designer ve FullStack olarak iş yapmaktayım.Merhaba, ben Halil, Yazılım Mühendisiyim. Erciyes Üniversitesinde 3. sınıfım. Üniversitede Rehber Gençlik Klukübü adındaki kulübte aktif olarak rol almaktayım.Kulübün düzenlemiş olduğu birbirinden farklı etkinlikler için tasarım oluşturma ve bu etkinliklere katılım gösterme noktasında çaba sarf ediyorum.Bununla birlikte üniversitede kendimi geliştirme adına farklı konulardaki kitap okumaları yapmaktayım. Kendimi geliştirme adına QataSoft qdındaki şirkette çalışmaktayım. Şirketin ihtiyaçlarına göre şekillenen bir iş temposu var. Bu tempoya göre Designer ve FullStack olarak iş yapmaktayım.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    @* <div class="ml-auto">
+                    <a class="text-white text-decoration-none" href="/Writer/Update/1">
+                    <button type="button" class="btn btn-gradient-dark btn-icon">
+                    <i class="mdi mdi-information"></i>
+                    </button>
+                    </a>
+                    </div>*@
+                </div>
+
+
+            </div>
+            <div class="d-flex justify-content-end pr-5 pb-5">
+                <a href="/Writer/WriterUpdate"><button class="btn btn-gradient-primary mr-2">Bilgilerimi Güncelle</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+

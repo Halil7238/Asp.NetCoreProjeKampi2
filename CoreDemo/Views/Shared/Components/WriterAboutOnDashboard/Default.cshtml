@@ -1,0 +1,50 @@
+﻿@model EntityLayer.Concrete.Writer
+
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Hakkımda</h4>
+            <div class="d-flex mt-5 align-items-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="form-group col-xs-12 col-md-2 text-center">
+                            <img src="@Model.WriterImage" class="rounded" alt="image" style="width:6em !important; height:6em !important;">
+                        </div>
+                        <div class="form-group col-xs-12 col-md-10 ">
+
+                            <div class="mb-0 flex-grow">
+                                <h5 class="mr-2 mb-2">@Model.WriterName</h5>
+                                <div class="template-demo mr-2 mb-3">
+                                    <button type="button" class="btn btn-inverse-dark btn-icon"><i class="mdi mdi-facebook"></i></button>
+                                    <button type="button" class="btn btn-inverse-dark btn-icon"><i class="mdi mdi-youtube"></i></button>
+                                    <button type="button" class="btn btn-inverse-dark btn-icon"><i class="mdi mdi-twitter"></i></button>
+                                    <button type="button" class="btn btn-inverse-dark btn-icon"><i class="mdi mdi-dribbble"></i></button>
+                                    <button type="button" class="btn btn-inverse-dark btn-icon"><i class="mdi mdi-linkedin"></i></button>
+                                    <button type="button" class="btn btn-inverse-dark btn-icon"><i class="mdi mdi-google-plus"></i></button>
+                                    <button class="btn btn-outline-dark btn-icon-text">
+                                        <i class="mdi mdi-city mdi-16px"></i>
+                                        <span class="d-inline-block text-left">
+                                            @*  <small class="font-weight-light d-block">Şehir</small>*@ @Model.WriterCity
+                                        </span>
+                                    </button>
+                                </div>
+
+                                <p class="mb-0 font-weight-light">@Model.WriterAbout</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ml-auto">
+                    <a class="text-white text-decoration-none" href="/Writer/Update/@Model.WriterId">
+                        <button type="button" class="btn btn-gradient-dark btn-icon">
+                            <i class="mdi mdi-information"></i>
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
